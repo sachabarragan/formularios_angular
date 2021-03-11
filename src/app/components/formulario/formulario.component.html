@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row center-align">
+        <form class="col s12 center-align" [formGroup]="formNewBike" (ngSubmit)="onSubmitForm()">
+          <div class="row center-align">
+            <div class="input-field col s6">
+              <input placeholder="Marca" id="marca" type="text" class="validate" formControlName="marca">
+              <label for="marca">Marca</label>
+               <div class="error" *ngIf="formNewBike.controls.marca.errors && formNewBike.controls.marca.touched">
+                Este campo es requerido
+              </div>
+            
+              
+            </div>
+            <div class="input-field col s6">
+              <input id="modelo" type="text" class="validate" formControlName="modelo">
+              <label for="modelo">Modelo</label>
+              <div class="error" *ngIf="formNewBike.controls.modelo.errors && formNewBike.controls.modelo.touched">
+                Este campo es requerido
+              </div>
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+                <input id="color" type="text" class="validate" formControlName="color">
+                <label for="color">Color</label>
+                <div class="error" *ngIf="formNewBike.controls.color.errors && formNewBike.controls.color.touched">
+                  Este campo es requerido
+                </div>
+                
+            </div>
+            <div class="input-field col s6">
+                <input id="anio" type="number" class="validate" formControlName="anio">
+                <label for="anio">Año</label>
+                <div class="error" *ngIf="formNewBike.controls.anio.errors && formNewBike.controls.anio.touched">
+                  Este campo es requerido
+                </div>
+                
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+                <input id="cilindrada" type="number" class="validate" formControlName="cilindrada">
+                <label for="cilindrada">Cilindrada</label>
+                <div class="error" *ngIf="formNewBike.controls.cilindrada.errors && formNewBike.controls.cilindrada.touched">
+                  Este campo es requerido
+                </div>
+                
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+                <input id="imagen" type="text" class="validate" formControlName="imagen">
+                <label for="imagen">Imagen</label>
+                <div class="error" *ngIf="formNewBike.controls.imagen.errors && formNewBike.controls.imagen.touched">
+                  Este campo es requerido
+                </div>
+                
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="input-field col s12">
+                <select name="seleccion" id="">
+                    <option value="rojsss">rojsss</option>
+                    <option value="rojsss">rojsss</option>
+                    <option value="rojsss">rojsss</option>
+                </select>
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="input-field col s12">
+                <input id="submit" type="submit" value="Enviar" [disabled]="!formNewBike.valid">
+            </div>
+          </div>
+        </form>
+      </div>
+</div>
+
